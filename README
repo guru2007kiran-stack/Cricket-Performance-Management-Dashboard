@@ -1,0 +1,120 @@
+# 🏏 Cricket Performance Management Dashboard
+
+**A Python-Based Relational Database Application for Cricket Academies**
+
+---
+
+## 1. Project Overview
+
+The **Cricket Performance Management Dashboard** is a desktop-based database application developed to simplify and organize the record-management activities of a cricket academy.
+
+Traditionally, cricket academies maintain player registrations, match details, and performance statistics using spreadsheets or manual records. Managing these records separately can lead to data duplication, inconsistencies, difficulty in retrieving information, and inefficient record maintenance.
+
+This project addresses these challenges by implementing a centralized relational database system integrated with a graphical user interface (GUI).
+
+The application allows academy administrators to manage player information, record matches, maintain individual performance statistics, and view an overall summary through a single interface.
+
+## 2. Problem Statement
+
+The academy currently relies on spreadsheet-based record keeping to manage player registrations, match information, and performance statistics.
+
+This approach creates several difficulties:
+
+- Maintaining records across multiple spreadsheets.
+- Avoiding duplicate and inconsistent information.
+- Connecting players with their respective matches.
+- Tracking individual player performance.
+- Updating and deleting related records accurately.
+- Retrieving information efficiently.
+
+Therefore, a structured database application is required to improve data organization, accuracy, accessibility, and management.
+
+## 3. Project Objectives
+
+The major objectives of this project are:
+
+1. To develop a centralized system for managing cricket academy records.
+2. To maintain player registration details systematically.
+3. To record matches played by individual players.
+4. To store and manage player performance statistics.
+5. To establish relationships between database tables using primary keys and foreign keys.
+6. To implement cascading deletion to maintain referential integrity.
+7. To develop a user-friendly graphical interface using Python Tkinter.
+8. To perform database operations through a simple and organized application.
+
+## 4. Key Features and Functionalities
+
+### 4.1 Dashboard
+- Displays the overall summary of the application.
+- Shows the total number of registered players.
+- Displays the total number of matches.
+- Provides an overview of stored performance records.
+
+### 4.2 Player Management
+- Add new player records.
+- View registered players.
+- Update existing player information.
+- Delete player records.
+- Maintain unique player identification.
+
+### 4.3 Match Management
+- Add new match records.
+- Associate matches with registered players.
+- Store opponent team names.
+- Record match dates.
+- Update and delete match information.
+
+### 4.4 Performance Management
+- Record individual player performance statistics.
+- Associate performance records with their respective matches.
+- Store statistical names and numerical values.
+- Update and delete performance records.
+- Maintain relationships between matches and performance data.
+
+## 5. Technologies and Tools Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Main programming language |
+| Tkinter | Graphical User Interface |
+| SQLite3 | Relational database management |
+| SQL | Database operations and queries |
+| Visual Studio Code | Development environment |
+
+### Why These Technologies?
+
+- **Python:** Provides simple and readable programming syntax.
+- **Tkinter:** Enables the development of a desktop application without requiring a separate frontend framework.
+- **SQLite:** Provides lightweight, file-based database storage without requiring a database server.
+- **SQL:** Supports structured data manipulation and retrieval.
+
+## 6. Database Design
+
+The application uses a relational database named `cricket_dashboard.db`.
+
+It contains three primary tables.
+
+### 6.1 Players Table
+
+Stores the registration details of cricket academy players.
+
+| Column | Data Type | Description |
+|---|---|---|
+| player_id | INTEGER | Primary key |
+| player_name | TEXT | Name of the player |
+| email | TEXT | Player's email address |
+
+### 6.2 Matches Table
+
+Stores match information associated with registered players.
+
+| Column | Data Type | Description |
+|---|---|---|
+| match_id | INTEGER | Primary key |
+| player_id | INTEGER | Foreign key referencing Players |
+| opponent_team | TEXT | Opponent team name |
+| match_date | TEXT | Date of the match |
+
+### 6.3 Performance Items Table
+
+Stores individual performance statisticsS
